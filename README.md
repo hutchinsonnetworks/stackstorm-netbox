@@ -38,6 +38,10 @@ is loaded.
 - **ipam\_get\_available_ips**: Get available IP Address(es) within a prefix
 - **ipam\_post\_available_ips**: POST request to create an object assigned to the first available IP address within a given prefix
 
+### Tenancy
+- **tenancy\_get\_tenants**: Get Tenant(s) via optional parameters
+- **tenancy\_post\_tenants**: POST request to create a new Tenant
+
 ### Virtualization
 - **virtualization\_get\_cluster\_groups**: Get Cluster Group(s) via optional parameters
 - **virtualization\_get\_cluster\_types**: Get Cluster Type(s) via optional parameters

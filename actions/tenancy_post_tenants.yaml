@@ -1,0 +1,29 @@
+---
+name: tenancy_post_tenants
+pack: netbox
+runner_type: "python-script"
+description: Post a tenant to NetBox
+enabled: true
+entry_point: base_post_action.py
+parameters:
+  endpoint_uri:
+    immutable: true
+    default: /api/tenancy/tenants/
+  name:
+    type: string
+    description: Name of the tenant
+  slug:
+    type: string
+    description: URL-friendly unique shorthand
+  group:
+    type: string
+    description: ID of the tenant group
+  description:
+    type: string
+    description: Tenant description
+  comments:
+    type: string
+    description: Comments for the tenant
+  custom_fields:
+    type: string
+    description: Custom fields
