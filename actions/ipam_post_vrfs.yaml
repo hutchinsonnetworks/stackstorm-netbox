@@ -1,0 +1,30 @@
+---
+name: ipam_post_vrfs
+pack: netbox
+runner_type: "python-script"
+description: Creates a new VRF
+enabled: true
+entry_point: base_post_action.py
+parameters:
+  endpoint_uri:
+    immutable: true
+    default: "/api/ipam/vrfs/"
+  name:
+    type: string
+    description: Name for the new VRF
+  rd:
+    type: string
+    description: Route distinguisher in any format
+  tenant:
+    type: string
+    description: ID of a tenant this VRF should belong to
+  enforce_unique:
+    type: boolean
+    default: true
+    description: Prevent duplicate prefixes/IP addresses within this VRF
+  description:
+    type: string
+    description: Description for the new VRF
+  custom_fields:
+    type: string
+    description: Custom fields
